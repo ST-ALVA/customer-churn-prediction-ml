@@ -1,4 +1,4 @@
-👉 For a quick, no-setup review of the full analysis, see `churn_prediction.html`.
+👉 For a quick, no-setup review of the full analysis, download `churn_prediction.html`.
 
 # Customer Churn Prediction — Applied Machine Learning for Retention Strategy
 
