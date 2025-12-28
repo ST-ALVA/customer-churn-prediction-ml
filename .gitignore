@@ -1,0 +1,28 @@
+# === Python ===
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+dist/
+build/
+
+# === Virtual Environments ===
+venv/
+.venv/
+env/
+sprint_13_ML/
+
+# === Jupyter ===
+.ipynb_checkpoints/
+
+# === VS Code ===
+.vscode/
+
+# === OS files ===
+.DS_Store
+Thumbs.db
+
+# === Logs ===
+*.log
