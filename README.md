@@ -38,14 +38,16 @@ The data exhibits **class imbalance**, with churn representing a minority class.
 
 ### Logistic Regression (Primary Model)
 - **ROC AUC:** **0.957**
-- **Recall (Churn, default threshold = 0.5):** 0.79
-- **Recall (Churn, adjusted threshold = 0.35):** **0.86**
-- **Precision (Churn):** 0.78
-- **F1-score (Churn):** 0.82
+| Threshold | Recall (Churn) | Precision (Churn) | F1 (Churn) |
+|---|---|---|---|
+| 0.50 (default) | 0.79 | 0.83 | 0.81 |
+| **0.35 (adjusted)** | **0.86** | 0.78 | 0.82 |
 
 Threshold tuning significantly improved churn detection, allowing the model to correctly identify **nearly 9 out of 10 churned customers**, at the cost of a moderate increase in false positives — a trade-off aligned with real-world retention priorities.
 
 This model was selected as the **primary decision-support model** due to its superior recall and interpretability.
+
+> **Note on threshold selection:** the 0.35 threshold was chosen by comparing results on the held-out test set, so the adjusted-threshold metrics are slightly optimistic. In production, the threshold should be tuned on a separate validation set or with cross-validation, and set according to the relative cost of a missed churner vs. an unnecessary retention offer. ROC AUC (0.957) does not depend on the threshold.
 
 ---
 
